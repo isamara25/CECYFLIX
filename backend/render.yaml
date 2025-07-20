@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: recomendaciones-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node index.js
+    rootDir: backend
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://zamluc02:<>@cluster0.ejebyda.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: OPENROUTER_API_KEY
+        value: a279c49bdef9e2032187e264a268594813a1aa0c0c25f1caf9449bf6e5ac81b5x
